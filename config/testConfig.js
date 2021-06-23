@@ -1,17 +1,8 @@
 
-<<<<<<< HEAD
 var ExerciseC6D = artifacts.require("ExerciseC6D");
 
 var Config = async function(accounts) {
     
-=======
-var ExerciseC6A = artifacts.require("ExerciseC6A");
-var ExerciseC6B = artifacts.require("ExerciseC6B");
-var ExerciseC6C = artifacts.require("ExerciseC6C");
-
-var Config = async function(accounts) {
-
->>>>>>> 2304f8d9925b89cbfcb3a0d8f02ae866d413f71b
     // These test addresses are useful when you need to add
     // multiple users in test scripts
     let testAddresses = [
@@ -28,25 +19,12 @@ var Config = async function(accounts) {
 
 
     let owner = accounts[0];
-<<<<<<< HEAD
     let exerciseC6D = await ExerciseC6D.new();
     
     return {
         owner: owner,
         testAddresses: testAddresses,
         exerciseC6D: exerciseC6D
-=======
-    let exerciseC6A = await ExerciseC6A.new();
-    let exerciseC6B = await ExerciseC6B.new();
-    let exerciseC6C = await ExerciseC6C.new();
-
-    return {
-        owner: owner,
-        testAddresses: testAddresses,
-        exerciseC6A: exerciseC6A,
-        exerciseC6B: exerciseC6B,
-        exerciseC6C: exerciseC6C,
->>>>>>> 2304f8d9925b89cbfcb3a0d8f02ae866d413f71b
     }
 }
 
