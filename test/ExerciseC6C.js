@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2304f8d9925b89cbfcb3a0d8f02ae866d413f71b
 var Test = require('../config/testConfig.js');
 
 contract('ExerciseC6C', async (accounts) => {
@@ -21,7 +24,11 @@ contract('ExerciseC6C', async (accounts) => {
 
     // ACT
     await config.exerciseC6C.registerEmployee(employee.id, employee.isAdmin, employee.address);
+<<<<<<< HEAD
     await config.exerciseC6CApp.addSale(employee.id, 400);
+=======
+    await config.exerciseC6C.addSale(employee.id, 400);
+>>>>>>> 2304f8d9925b89cbfcb3a0d8f02ae866d413f71b
     let bonus = await config.exerciseC6C.getEmployeeBonus.call(employee.id);
 
     // ASSERT
@@ -31,4 +38,8 @@ contract('ExerciseC6C', async (accounts) => {
 
 
  
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 2304f8d9925b89cbfcb3a0d8f02ae866d413f71b
