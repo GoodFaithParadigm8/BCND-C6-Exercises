@@ -8,18 +8,14 @@
   "repository": "https://github.com/techbubble/blockchain-day1",
   "license": "MIT",
   "scripts": {
-<<<<<<< HEAD
     "test": "truffle test test/ExerciseC6D.js"
-=======
-    "test": "truffle test test/ExerciseC6C.js"
->>>>>>> 2304f8d9925b89cbfcb3a0d8f02ae866d413f71b
   },
   "author": "Nik Kalyani <nik@kalyani.com> https://www.kalyani.com",
   "devDependencies": {
+    "@truffle/hdwallet-provider": "^1.4.1",
     "bignumber": "1.1.0",
     "openzeppelin-solidity": "^1.10.0",
-    "truffle": "^4.1.14",
-    "truffle-hdwallet-provider": "^0.0.5"
+    "truffle": "^4.1.14"
   },
   "dependencies": {}
 }

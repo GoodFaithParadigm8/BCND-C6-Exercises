@@ -1,4 +1,4 @@
-pragma solidity ^0.4.25;
+pragma solidity > 0.4.25;
 
 // It's important to avoid vulnerabilities due to numeric overflow bugs
 // OpenZeppelin's SafeMath library, when used correctly, protects agains such bugs
@@ -25,10 +25,7 @@ contract ExerciseC6C {
 
     address private contractOwner;              // Account used to deploy contract
     mapping(string => Profile) employees;      // Mapping for storing employees
-<<<<<<< HEAD
     mapping(address => uint256) private authorizedContracts;
-=======
->>>>>>> 2304f8d9925b89cbfcb3a0d8f02ae866d413f71b
 
     /********************************************************************************************/
     /*                                       EVENT DEFINITIONS                                  */
@@ -64,7 +61,6 @@ contract ExerciseC6C {
         _;
     }
 
-<<<<<<< HEAD
     modifier requireIsCallerAuthorized()
     {
         require(authorizedContracts[msg.sender] == 1, "Caller is not contract owner");
@@ -72,8 +68,6 @@ contract ExerciseC6C {
     }
 
 
-=======
->>>>>>> 2304f8d9925b89cbfcb3a0d8f02ae866d413f71b
     /********************************************************************************************/
     /*                                       UTILITY FUNCTIONS                                  */
     /********************************************************************************************/
@@ -94,7 +88,6 @@ contract ExerciseC6C {
         return employees[id].isRegistered;
     }
 
-<<<<<<< HEAD
     function authorizeContract
                             (
                                 address contractAddress
@@ -115,8 +108,6 @@ contract ExerciseC6C {
         delete authorizedContracts[contractAddress];
     }
 
-=======
->>>>>>> 2304f8d9925b89cbfcb3a0d8f02ae866d413f71b
     /********************************************************************************************/
     /*                                     SMART CONTRACT FUNCTIONS                             */
     /********************************************************************************************/
@@ -161,12 +152,7 @@ contract ExerciseC6C {
                                     uint256 bonus
 
                                 )
-<<<<<<< HEAD
                                 external
-=======
-                                internal
-                                requireContractOwner
->>>>>>> 2304f8d9925b89cbfcb3a0d8f02ae866d413f71b
     {
         require(employees[id].isRegistered, "Employee is not registered.");
 
@@ -175,46 +161,6 @@ contract ExerciseC6C {
 
     }
 
-<<<<<<< HEAD
 
 }
 
-=======
-    function calculateBonus
-                            (
-                                uint256 sales
-                            )
-                            internal
-                            view
-                            requireContractOwner
-                            returns(uint256)
-    {
-        if (sales < 100) {
-            return sales.mul(5).div(100);
-        }
-        else if (sales < 500) {
-            return sales.mul(7).div(100);
-        }
-        else {
-            return sales.mul(10).div(100);
-        }
-    }
-
-    function addSale
-                                (
-                                    string id,
-                                    uint256 amount
-                                )
-                                external
-                                requireContractOwner
-    {
-        updateEmployee(
-                        id,
-                        amount,
-                        calculateBonus(amount)
-        );
-    }
-
-
-}
->>>>>>> 2304f8d9925b89cbfcb3a0d8f02ae866d413f71b
